@@ -1,0 +1,50 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# Ignore bundler config.
+**/.bundle
+**/vendor/ruby
+
+# Ignore the default SQLite database.
+**/db/*.sqlite3
+**/db/*.sqlite3-journal
+
+# ignore structure.sql
+**/db/structure.sql
+
+# Ignore all logfiles and tempfiles.
+**/log/*
+**/tmp/*
+!**/log/.keep
+!**/tmp/.keep
+
+# Ignore screenshots
+**/screenshot.png
+
+# Database dumps
+*.dump*
+
+# misc
+yarn.lock
+package-lock.json
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+.vscode/*
+!.vscode/prettier.json
+.idea
