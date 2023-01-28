@@ -5,4 +5,3 @@ elsif rand(2) == 1
 else
   puts 'Выпал орел'
 end
-
