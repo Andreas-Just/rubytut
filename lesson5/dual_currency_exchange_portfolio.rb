@@ -31,4 +31,3 @@ elsif disbalance > 0
 else
   puts "Вам нужно продать #{disbalance.abs} рублей"
 end
-
