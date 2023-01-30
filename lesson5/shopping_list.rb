@@ -15,7 +15,6 @@ while groceries.any?
   product = gets.chomp
 
   groceries.delete(product.strip)
-  puts product
 end
 
 puts "It's done!"
