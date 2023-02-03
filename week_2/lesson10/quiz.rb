@@ -2,19 +2,19 @@
 current_path = File.dirname(__FILE__)
 
 folder_path = "#{current_path}/data"
-file_name = /question_\d/
+file_name = "question_*.txt"
 number_questions = 3
 correct_answers = 0
 
-question_files = Dir.entries(folder_path)
+question_files = Dir.glob("#{folder_path}/#{file_name}")
 
 if Dir.exist?(folder_path)
   puts "Мини-викторина. Ответьте на вопросы."
 
-  random_file = question_files.select {|name| name =~ file_name}.shuffle.first(number_questions)
+  random_file = question_files.shuffle.first(number_questions)
   questions_answers = []
   random_file.each do |name|
-    file = File.new("#{folder_path}/#{name}", "r:UTF-8")
+    file = File.open(name)
     questions_answers << file.readlines
     file.close
   end
