@@ -1,9 +1,7 @@
 if rand(11) == 10
   puts 'Монета встала на ребро'
+elsif rand(2) == 1
+  puts 'Выпала решка'
 else
-  if rand(2) == 1
-    puts 'Выпала решка'
-  else
-    puts 'Выпал орел'
-  end
+  puts 'Выпал орел'
 end
