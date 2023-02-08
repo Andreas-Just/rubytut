@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 def get_user_radius(str)
-  return Integer(str, 10, exception: false)
+  Integer(str, 10, exception: false)
 end
 
 def number?(num)
@@ -8,11 +8,11 @@ def number?(num)
     puts 'Вы должны ввести номер'
     num = get_user_radius(gets)
   end
-  return num
+  num
 end
 
 def area_of_circle(radius)
-  return radius *= Math::PI
+  radius * Math::PI
 end
 
 puts "Введите радиус круга:"
