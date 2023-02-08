@@ -1,44 +1,35 @@
 # frozen_string_literal: true
-def billion?(number)
-  return number >= 1 * 10 ** 9
-end
-
 def exception?(number)
   remainder100 = number % 100
-  return remainder100 >= 11 && remainder100 <= 14
+  remainder100 >= 11 && remainder100 <= 14
 end
 
-def declension(number)
-  if number == nil || !number.is_a?(Numeric)
+def declension(number, raccoon, raccoona, raccoons)
+  if number.nil?
     number = 0
   end
 
   if exception?(number)
-    return "енотов"
+    return raccoons
   end
 
   remainder = number % 10
-  p remainder
 
   if remainder == 1
-    return "енот"
+    return raccoon
   end
 
   if remainder >= 2 && remainder <= 4
-    return "енота"
+    return raccoona
   end
 
-  if (remainder >= 5 && remainder <= 9) || remainder == 0
-    return "енотов"
-  end
+  return raccoons
 end
 
-p "Сколько вам енотов?"
+#-------------------------------------
+noun_cases = %w[енот енота енотов]
+
+puts "Сколько вам енотов?"
 user_number = gets.to_i
 
-if billion?(user_number)
-  p "Закатай губу! Еноты так попадут в красную книгу."
-  exit
-end
-
-p "Вот вам #{user_number} #{declension(user_number)}!"
+puts "Вот вам #{user_number} #{declension(user_number, noun_cases[0], noun_cases[1], noun_cases[2])}!"
