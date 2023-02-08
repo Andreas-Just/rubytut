@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 def exception?(number)
   remainder100 = number % 100
-  remainder100 >= 11 && remainder100 <= 14
+  remainder100 >= 11 and remainder100 <= 14
 end
 
 def declension(number, raccoon, raccoona, raccoons)
@@ -19,7 +19,7 @@ def declension(number, raccoon, raccoona, raccoons)
     return raccoon
   end
 
-  if remainder >= 2 && remainder <= 4
+  if remainder >= 2 and remainder <= 4
     return raccoona
   end
 
