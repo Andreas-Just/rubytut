@@ -51,17 +51,13 @@ results = [
   [0..3, 'Ваша общительность чрезмерна. Вы говорливы, многословны, вспыльчивы, обидчивы, часто необъективны. Вы вмешиваетесь в дела, которые не имеют к вам никакого отношения. Беретесь судить о проблемах, в которых совершенно не разбираетесь. Часто из за вас возникают конфликты. С серьезной работой вы справиться не в состоянии. Людям очень трудно с вами. Вам необходимо воспитывать в себе терпение, сдержанность и уважительное отношение к людям.']
 ]
 
-def exception?(number_question)
-  return [5, 10, 11].include?(number_question)
-end
-
-
 puts "Добрый день, #{name}! Ответьте пожалуйста честно на несколько вопросов, чтобы узнать кое-что о себе."
 
 yes_answer = 1
 sometimes_answer = 2
 no_answer = 3
 points = 0
+wrong_questions_numbers = [5, 10, 11]
 
 questions.each.with_index(1) do |question, index|
   puts "\nВопрос № #{index}. #{question}"
@@ -75,7 +71,7 @@ questions.each.with_index(1) do |question, index|
   end
 
   if user_input == yes_answer
-    unless exception?(index)
+    if wrong_questions_numbers.include?(index)
       points += 2
     end
   elsif user_input == sometimes_answer

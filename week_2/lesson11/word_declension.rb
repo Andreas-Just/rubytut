@@ -5,9 +5,6 @@ def exception?(number)
 end
 
 def declension(number, raccoon, raccoona, raccoons)
-  if number.nil?
-    number = 0
-  end
 
   if exception?(number)
     return raccoons
@@ -23,7 +20,7 @@ def declension(number, raccoon, raccoona, raccoons)
     return raccoona
   end
 
-  return raccoons
+  raccoons
 end
 
 #-------------------------------------
