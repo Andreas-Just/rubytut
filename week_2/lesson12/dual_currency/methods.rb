@@ -1,6 +1,7 @@
-def number?(str)
-  while str == '' || str != str.to_i.to_s do
-    puts 'Вы должны ввести число'
+def get_number(str)
+  regexp = /\A\d+(\.\d{1,2})?\z/
+  until str.match?(regexp)
+    puts 'Вы должны ввести целое число или дробное число с двумя знаками после точки'
     str = STDIN.gets.chomp
   end
   str.to_f
