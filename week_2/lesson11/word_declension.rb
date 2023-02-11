@@ -10,20 +10,19 @@ def declension(number, raccoon, raccoona, raccoons)
     return raccoons
   end
 
-  remainder = number % 10
+  remainder = number.abs % 10
 
   if remainder == 1
     return raccoon
   end
 
-  if remainder >= 2 and remainder <= 4
+  if (2..4).include?(remainder)
     return raccoona
   end
 
   raccoons
 end
 
-#-------------------------------------
 noun_cases = %w[енот енота енотов]
 
 puts "Сколько вам енотов?"

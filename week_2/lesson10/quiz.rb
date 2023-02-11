@@ -6,22 +6,20 @@ file_name = "question_*.txt"
 number_questions = 3
 correct_answers = 0
 
-question_files = Dir.glob("#{folder_path}/#{file_name}")
 
 if Dir.exist?(folder_path)
   puts "Мини-викторина. Ответьте на вопросы."
 
+  question_files = Dir.glob("#{folder_path}/#{file_name}")
   random_file = question_files.shuffle.first(number_questions)
   questions_answers = []
+
   random_file.each do |name|
-    file = File.open(name)
-    questions_answers << file.readlines
-    file.close
+    questions_answers << File.readlines(name, chomp: true)
   end
 
   questions_answers.each do | arr |
     question, answer = arr
-    answer_options = [answer.delete("\n"), answer.delete("\n").downcase]
 
     puts question
 
@@ -31,7 +29,7 @@ if Dir.exist?(folder_path)
       user_answer = gets.chomp.strip
     end
 
-    if answer_options.include?(user_answer)
+    if answer.downcase == user_answer.downcase
       correct_answers += 1
       puts "Верный ответ!"
     else

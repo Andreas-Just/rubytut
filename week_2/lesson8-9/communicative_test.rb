@@ -76,7 +76,7 @@ questions.each.with_index(1) do |question, index|
     end
   elsif user_input == sometimes_answer
     points += 1
-  elsif exception?(index)
+  elsif wrong_questions_numbers.include?(index)
     points += 2
   end
 end
