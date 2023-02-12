@@ -15,22 +15,20 @@ end
 
 
 def bmi_print(body_mass_index)
-  puts "Ваш индекс: #{body_mass_index}"
-
   if body_mass_index < 16
-    puts "Выраженный дефицит массы тела"
+    "Выраженный дефицит массы тела"
   elsif body_mass_index >= 16 && body_mass_index < 18.5
-    puts "Недостаточная (дефицит) масса тела"
+    return "Недостаточная (дефицит) масса тела"
   elsif body_mass_index >= 18.5 && body_mass_index < 25.0
-    puts "Норма"
+    return "Норма"
   elsif body_mass_index >= 25.0 && body_mass_index < 30.0
-    puts "Избыточная масса тела (предожирение)"
+    return "Избыточная масса тела (предожирение)"
   elsif body_mass_index >= 30.0 && body_mass_index < 35.0
-    puts "Ожирение 1 степени"
+    return "Ожирение 1 степени"
   elsif body_mass_index >= 35.0 && body_mass_index < 40.0
-    puts "Ожирение 2 степени"
+    return "Ожирение 2 степени"
   else
-    puts "Ожирение 3 степени"
+    "Ожирение 3 степени"
   end
 end
 

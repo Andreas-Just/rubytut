@@ -1,11 +1,9 @@
 # frozen_string_literal: true
 def exception?(number)
-  remainder100 = number % 100
-  remainder100 >= 11 and remainder100 <= 14
+  (11..14).include?(number % 100)
 end
 
 def declension(number, raccoon, raccoona, raccoons)
-
   if exception?(number)
     return raccoons
   end

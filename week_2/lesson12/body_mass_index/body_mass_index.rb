@@ -10,3 +10,6 @@ height = get_number(STDIN.gets.chomp)
 bmi = body_mass_index(weight, height)
 
 bmi_print(bmi)
+
+puts "Ваш индекс: #{bmi}"
+puts "#{bmi_print(bmi)}"
