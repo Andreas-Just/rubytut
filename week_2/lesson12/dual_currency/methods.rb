@@ -1,7 +1,6 @@
 def get_number(str)
-  regexp = /\A\d+(\.\d{1,2})?\z/
-  until str.match?(regexp)
-    puts 'Вы должны ввести целое число или дробное число с двумя знаками после точки'
+  until Float(str, exception: false).to_f.positive?
+    puts 'Вы должны ввести целое число или дробное число, не ноль'
     str = STDIN.gets.chomp
   end
   str.to_f
