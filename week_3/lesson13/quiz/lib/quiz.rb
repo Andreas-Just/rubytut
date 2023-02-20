@@ -1,13 +1,13 @@
 class Quiz
-  attr_reader :question, :answer, :point, :total_points, :correct_answers, :is_correct_answers
+  attr_reader :question, :answer, :point, :total_points, :correct_answers, :is_correct_answer
 
-  def initialize()
+  def initialize
     @question = nil
     @answer = nil
     @point = nil
     @total_points = 0
     @correct_answers = 0
-    @is_correct_answers = true
+    @is_correct_answer = true
   end
 
   def current_step(number, questions_answers_points)
@@ -18,9 +18,9 @@ class Quiz
     if @answer.downcase == answer
       @total_points += @point.to_i
       @correct_answers += 1
-      @is_correct_answers = true
+      @is_correct_answer = true
     else
-      @is_correct_answers = false
+      @is_correct_answer = false
     end
   end
 end

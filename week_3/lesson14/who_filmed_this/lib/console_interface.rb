@@ -10,14 +10,23 @@ class ConsoleInterface
   end
 
   def print_question(number)
+    current_movie = @quiz.movies[number]
+    movies = current_movie.values[0]
+    directors = movies.map(&:hash)
+    director = current_movie.keys[0]
+    movie = movies.detect { | m | m.find(director) }
+    p movie
+    p current_movie.keys
+    p directors
+
     puts <<~CURRENT_QUIZ_STATUS
-      Вопрос #{number + 1}: 
-      #{@quiz.question}
+      Вопрос #{number + 1}:
+      Кто снял «#{movie.title}» (#{movie.year})
     CURRENT_QUIZ_STATUS
   end
 
   def print_answer
-    if @quiz.is_correct_answer
+    if @quiz.is_correct_answers
       puts "Верный ответ!"
     else
       puts "Неправильно. Правильный ответ: #{@quiz.answer}"
