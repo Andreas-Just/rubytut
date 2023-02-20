@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 class Question
   NUMBER_OPTIONS = 4
-
-  attr_reader :questions, :answer
   def initialize(films, number_questions)
     @films = films
     @number_questions = number_questions
@@ -11,8 +9,15 @@ class Question
 
   def run
     @number_questions.times do
-      films_options = films_by_number_options
-      @questions << Hash(films_options.sample => films_options)
+      film_options = films_by_number_options
+
+      current_film = film_options.sample
+
+      while self.uniq_film?(current_film)
+        current_film = film_options.sample
+      end
+
+      @questions << Hash(current_film => film_options)
     end
     @questions
   end
@@ -20,5 +25,11 @@ class Question
   private
   def films_by_number_options
     @films.uniq(&:director).sample(NUMBER_OPTIONS)
+  end
+
+  def uniq_film?(current_film)
+    @questions.any? do |el|
+      el.keys[0].title == current_film.title
+    end
   end
 end

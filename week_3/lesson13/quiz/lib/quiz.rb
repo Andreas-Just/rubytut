@@ -1,6 +1,4 @@
 class Quiz
-  attr_reader :questions, :number_questions
-
   def initialize(questions, number_questions)
     @questions = questions
     @number_questions = number_questions
