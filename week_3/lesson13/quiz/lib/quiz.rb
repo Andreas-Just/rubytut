@@ -1,26 +1,46 @@
 class Quiz
-  attr_reader :question, :answer, :point, :total_points, :correct_answers, :is_correct_answer
+  attr_reader :questions, :number_questions
 
-  def initialize
-    @question = nil
-    @answer = nil
-    @point = nil
+  def initialize(questions, number_questions)
+    @questions = questions
+    @number_questions = number_questions
+    @question = ''
+    @answer = ''
+    @points = 0
     @total_points = 0
-    @correct_answers = 0
-    @is_correct_answer = true
+    @total_correct_answers = 0
   end
 
-  def current_step(number, questions_answers_points)
-    @question, @answer, @point = questions_answers_points[number]
+  def current_step(number)
+    @question = @questions[number].question
+    @answer = @questions[number].answer
+    @points = @questions[number].points.to_i
   end
 
-  def play!(answer)
-    if @answer.downcase == answer
-      @total_points += @point.to_i
-      @correct_answers += 1
-      @is_correct_answer = true
-    else
-      @is_correct_answer = false
-    end
+  def correct_answer
+    puts "Неправильно. Правильный ответ: #{@answer}"
+  end
+
+  def score_up
+    @total_points += @points
+    @total_correct_answers += 1
+    puts "Верный ответ!"
+  end
+
+  def answer_correct?(word)
+    word == @answer.downcase
+  end
+
+  def current_question
+    @question
+  end
+
+  def over?(number)
+    number == @number_questions
+  end
+
+  def summarize
+    puts "Правильных ответов: #{@total_correct_answers} из #{@number_questions}"
+    puts "Вы набрали #{@total_points} баллов"
   end
 end

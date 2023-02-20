@@ -1,30 +1,34 @@
 # frozen_string_literal: true
-require_relative "lib/console_interface"
+require_relative "lib/file_reader"
+require_relative "lib/question"
 require_relative "lib/quiz"
 
 current_path = File.dirname(__FILE__)
 folder_path = "#{current_path}/data"
 file_name = "question_*.txt"
-number_questions = 5
-questions_answers_points = []
+number_questions = 3
+current_question_number = 0
 
-puts "Папка не найдена" unless Dir.exist?(folder_path)
-puts "Мини-викторина. Ответьте на вопросы!"
+questions = FileReader.
+  new(folder_path, file_name, Question).
+  run.
+  sample(number_questions)
+quiz = Quiz.new(questions, number_questions)
 
-Dir.glob("#{folder_path}/#{file_name}").
-  sample(number_questions).each do |name|
-    questions_answers_points << File.readlines(name, chomp: true)
+until quiz.over?(current_question_number)
+  quiz.current_step(current_question_number)
+
+  puts quiz.current_question
+
+  user_answer = gets.chomp.strip.downcase
+
+  if quiz.answer_correct?(user_answer)
+    quiz.score_up
+  else
+    quiz.correct_answer
+  end
+
+  current_question_number += 1
 end
 
-quiz = Quiz.new
-console_interface = ConsoleInterface.new(quiz, number_questions)
-
-number_questions.times do | number|
-  quiz.current_step(number, questions_answers_points)
-  console_interface.print_question(number)
-  word = console_interface.get_input
-  quiz.play!(word)
-  console_interface.print_answer
-end
-
-console_interface.print_victory
+quiz.summarize
