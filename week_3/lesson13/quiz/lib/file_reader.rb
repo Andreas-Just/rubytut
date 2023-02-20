@@ -1,12 +1,9 @@
 # frozen_string_literal: true
 class FileReader
-  attr_reader :questions
-
   def initialize(path, file_name, question)
     @path = path
     @file_name = file_name
     @question = question
-    @questions = []
   end
 
   def run
