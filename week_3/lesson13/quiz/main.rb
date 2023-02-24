@@ -23,12 +23,12 @@ until quiz.over?(current_question_number)
   user_answer = gets.chomp.strip.downcase
 
   if quiz.answer_correct?(user_answer)
-    quiz.score_up
+    puts quiz.score_up
   else
-    quiz.correct_answer
+    puts quiz.correct_answer
   end
 
   current_question_number += 1
 end
 
-quiz.summarize
+puts quiz.summarize

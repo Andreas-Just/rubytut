@@ -17,20 +17,27 @@ quiz = Quiz.new(questions, number_questions)
 
 until quiz.over?(current_question_number)
   quiz.current_step(current_question_number)
-  quiz.current_question(current_question_number)
+
+  puts <<~CURRENT_QUIZ_STATUS
+      Вопрос #{current_question_number + 1}:
+      Кто снял «#{quiz.title}» (#{quiz.year})
+  CURRENT_QUIZ_STATUS
+  quiz.director_options.each.with_index(1) do | director, idx |
+    puts "#{idx}. #{director}"
+  end
 
   until (user_choice = $stdin.gets.to_i).between?(1, quiz.director_options.size)
     puts 'Выберите номер из предложенных вариантов'
   end
 
   if quiz.answer_correct?(user_choice)
-    quiz.score_up
+    puts quiz.score_up
   else
-    quiz.correct_answer
+    puts quiz.correct_answer
   end
 
   current_question_number += 1
 end
 
-quiz.summarize
+puts quiz.summarize
 

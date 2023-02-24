@@ -16,13 +16,13 @@ class Quiz
   end
 
   def correct_answer
-    puts "Неправильно. Правильный ответ: #{@answer}"
+    "Неправильно. Правильный ответ: #{@answer}"
   end
 
   def score_up
     @total_points += @points
     @total_correct_answers += 1
-    puts "Верный ответ!"
+    "Верный ответ!"
   end
 
   def answer_correct?(word)
@@ -38,7 +38,7 @@ class Quiz
   end
 
   def summarize
-    puts "Правильных ответов: #{@total_correct_answers} из #{@number_questions}"
-    puts "Вы набрали #{@total_points} баллов"
+    "Правильных ответов: #{@total_correct_answers} из #{@number_questions}\n" +
+    "Вы набрали #{@total_points} баллов"
   end
 end

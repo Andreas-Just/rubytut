@@ -1,5 +1,5 @@
 class Quiz
-  attr_reader :director_options
+  attr_reader :director_options, :title, :year
 
   def initialize(questions, number_questions)
     @questions = questions
@@ -21,24 +21,16 @@ class Quiz
   end
 
   def correct_answer
-    puts "Неправильно! Правильный ответ: #{@director}"
+    "Неправильно! Правильный ответ: #{@director}"
   end
 
   def score_up
     @total_correct_answers += 1
-    puts "Верно!"
+    "Верно!"
   end
 
   def answer_correct?(number)
     @director_options[number.to_i - 1] == @director
-  end
-
-  def current_question(number)
-    puts <<~CURRENT_QUIZ_STATUS
-      Вопрос #{number + 1}:
-      Кто снял «#{@title}» (#{@year})
-    CURRENT_QUIZ_STATUS
-    self.print_options
   end
 
   def over?(number)
@@ -46,7 +38,7 @@ class Quiz
   end
 
   def summarize
-    puts "Вы угадали #{@total_correct_answers} из #{@number_questions} режиссеров"
+    "Вы угадали #{@total_correct_answers} из #{@number_questions} режиссеров"
   end
 
   private
@@ -54,12 +46,5 @@ class Quiz
   def make_director_options(number)
     @director_options = @questions[number].values[0].map(&:director)
   end
-
-  def print_options
-    @director_options.each.with_index(1) do | director, idx |
-      puts "#{idx}. #{director}"
-    end
-  end
-
 end
 
