@@ -1,8 +1,5 @@
 # frozen_string_literal: true
-require_relative "lib/file_reader"
 require_relative "lib/film"
-require_relative "lib/question"
-require_relative "lib/quiz"
 
 current_path = File.dirname(__FILE__)
 folder_name = "data"
