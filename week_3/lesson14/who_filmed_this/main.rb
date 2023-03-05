@@ -21,10 +21,8 @@ until quiz.over?(current_question_number)
   puts <<~CURRENT_QUIZ_STATUS
       Вопрос #{current_question_number + 1}:
       Кто снял «#{quiz.title}» (#{quiz.year})
+      #{quiz.director_options.map.with_index(1) { |director, idx| "#{idx}. #{director}"}.join("\n")}
   CURRENT_QUIZ_STATUS
-  quiz.director_options.each.with_index(1) do | director, idx |
-    puts "#{idx}. #{director}"
-  end
 
   until (user_choice = $stdin.gets.to_i).between?(1, quiz.director_options.size)
     puts 'Выберите номер из предложенных вариантов'
