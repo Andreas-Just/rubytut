@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-pattern = /(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?/
+pattern = /^(\+)?([- ()]?\d[- ()]?){10,14}$/
 puts "Введите номер телефона:"
 
 user_input = STDIN.gets.chomp
