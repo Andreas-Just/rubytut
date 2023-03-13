@@ -15,7 +15,7 @@ quiz = Quiz.new(questions)
 until quiz.over?
   puts quiz.current_question
 
-  user_answer = gets.chomp.strip.downcase
+  user_answer = gets.chomp
 
   if quiz.answer_correct?(user_answer)
     puts quiz.score_up!

@@ -23,11 +23,11 @@ class Quiz
   end
 
   def answer_correct?(word)
-    word == @questions[@current_question_number].answer.downcase
+    word.strip.downcase == @questions[@current_question_number].answer.downcase
   end
 
   def current_question
-    @question = @questions[@current_question_number].question
+    @questions[@current_question_number].question
   end
 
   def over?
