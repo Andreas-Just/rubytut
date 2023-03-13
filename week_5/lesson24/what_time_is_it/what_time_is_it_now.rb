@@ -18,5 +18,5 @@ if user_input.nil? || user_input == 0
   user_input = 10
 end
 
-set_interval(user_input.abs) { puts Time.new() }
+set_interval(user_input.abs) { puts Time.new }
 
