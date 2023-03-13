@@ -3,9 +3,7 @@ def set_interval(times)
   i = 0
 
   loop do
-    if i == times
-      break
-    end
+    break if i == times
     yield
     sleep 1
     i += 1
