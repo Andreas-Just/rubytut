@@ -12,4 +12,3 @@ def multiple(number)
 end
 
 [*1..100].each { |el| puts multiple(el) }
-
