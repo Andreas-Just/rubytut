@@ -11,8 +11,6 @@ def multiple(num)
   end
 end
 
-numbers = (1..100).to_a
-
-numbers.each do |number|
+[*1..100].each do |number|
   puts multiple(number)
 end
