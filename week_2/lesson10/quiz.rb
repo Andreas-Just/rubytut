@@ -17,7 +17,7 @@ question_files.sample(number_questions).each do |name|
   questions_answers << File.readlines(name, chomp: true)
 end
 
-questions_answers.each do | question, answer, hv |
+questions_answers.each do | question, answer |
   puts question
 
   user_answer = nil
