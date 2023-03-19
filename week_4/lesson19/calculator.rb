@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 puts 'Первое число:'
-number1 = STDIN.gets.chomp.to_i
+number1 = STDIN.gets.to_i
 puts 'Второе число:'
-number2 = STDIN.gets.chomp.to_i
+number2 = STDIN.gets.to_i
 
 puts 'Выберите операцию (+ - * /)'
 operation = STDIN.gets.chomp

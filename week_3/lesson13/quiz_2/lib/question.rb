@@ -4,6 +4,6 @@ class Question
   def initialize(question, answer, points)
     @question = question
     @answer = answer
-    @points = points
+    @points = points.to_i
   end
 end

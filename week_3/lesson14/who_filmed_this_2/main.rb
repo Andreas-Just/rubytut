@@ -33,16 +33,14 @@ number_questions.times do | number |
       sample(number_options).
       each_with_object([current_film.director]) { | film, option |
         option << film.director if film.director != current_film.director && option.size < number_options
-      }.
-      sample(number_options)
+      }.shuffle
 
   puts <<~CURRENT_QUIZ_STATUS
     Вопрос #{number + 1}:
     Кто снял «#{current_film.title}» (#{current_film.year})
+    #{director_options.map.with_index(1) { |director, idx| "#{idx}. #{director}"}.join("\n")}
   CURRENT_QUIZ_STATUS
-  director_options.each.with_index(1) do | director, idx |
-      puts "#{idx}. #{director}"
-    end
+
 
   until (user_choice = $stdin.gets.to_i).between?(1, number_options)
     puts 'Выберите номер из предложенных вариантов'
