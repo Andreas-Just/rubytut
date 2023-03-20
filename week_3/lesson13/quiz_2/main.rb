@@ -18,12 +18,16 @@ until quiz.over?
   user_answer = gets.chomp
 
   if quiz.answer_correct?(user_answer)
-    puts quiz.score_up!
+    puts "Верный ответ!"
+    quiz.score_up!
   else
-    puts quiz.correct_answer
+    puts "Неправильно. Правильный ответ: #{quiz.correct_answer}"
   end
 
   quiz.next_question!
 end
 
-puts quiz.summarize
+puts <<~SUMMARIZE
+  Правильных ответов: #{quiz.total_correct_answers} из #{quiz.questions.size}
+  Вы набрали #{quiz.total_points} баллов
+SUMMARIZE

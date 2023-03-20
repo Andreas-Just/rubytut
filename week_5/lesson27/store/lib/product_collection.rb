@@ -26,17 +26,17 @@ class ProductCollection
       end
     end
 
-    self.new(products)
+    new(products)
   end
 
   def sort!(params)
     case params[:by]
     when :title
-      @products.sort_by! { |product| product.to_s }
+      @products.sort_by!(&:to_s)
     when :price
-      @products.sort_by! { |product| product.price }
+      @products.sort_by!(&:price)
     when :amount
-      @products.sort_by! { |product| product.amount }
+      @products.sort_by!(&:amount)
     end
 
     @products.reverse! if params[:order] == :asc

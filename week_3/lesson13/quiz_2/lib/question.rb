@@ -6,4 +6,8 @@ class Question
     @answer = answer
     @points = points.to_i
   end
+
+  def to_s
+    "#{question} (#{points} баллов)"
+  end
 end

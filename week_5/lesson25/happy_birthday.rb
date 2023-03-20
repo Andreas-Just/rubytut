@@ -11,14 +11,18 @@ person2 = {
 }
 
 def happy_birthday(person)
-  puts <<~PRINT_HAPPY_BIRTHDAY
+  <<~TEXT_HAPPY_BIRTHDAY
+
     Дорогой #{person[:name]},
+
     Поздравляем Вас с днём рождения!
     Вам сегодня исполняется аж #{person[:age]}!
+
     #{person[:congratulation]}
-  PRINT_HAPPY_BIRTHDAY
+
+  TEXT_HAPPY_BIRTHDAY
 end
 
-happy_birthday(person1)
-p '--------------------'
-happy_birthday(person2)
+puts happy_birthday(person1)
+puts '                *  *  *'
+puts happy_birthday(person2)

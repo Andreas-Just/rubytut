@@ -1,8 +1,9 @@
 class Quiz
   NUMBER_QUESTIONS = 5
 
+  attr_reader :questions, :total_correct_answers, :total_points
   def initialize(questions)
-    @questions = questions
+    @questions = questions.sample(NUMBER_QUESTIONS)
     @current_question_number = 0
     @total_points = 0
     @total_correct_answers = 0
@@ -13,29 +14,23 @@ class Quiz
   end
 
   def correct_answer
-    "Неправильно. Правильный ответ: #{@questions[@current_question_number].answer}"
+    current_question.answer
   end
 
   def score_up!
-    @total_points += @questions[@current_question_number].points
+    @total_points += current_question.points
     @total_correct_answers += 1
-    "Верный ответ!"
   end
 
   def answer_correct?(word)
-    word.strip.downcase == @questions[@current_question_number].answer.downcase
+    word.strip.downcase == correct_answer.downcase
   end
 
   def current_question
-    @questions[@current_question_number].question
+    @questions[@current_question_number]
   end
 
   def over?
     NUMBER_QUESTIONS == @current_question_number
-  end
-
-  def summarize
-    "Правильных ответов: #{@total_correct_answers} из #{NUMBER_QUESTIONS}\n" +
-    "Вы набрали #{@total_points} баллов"
   end
 end
