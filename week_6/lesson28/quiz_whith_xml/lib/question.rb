@@ -1,13 +1,19 @@
 # frozen_string_literal: true
 class Question
-  attr_reader :question, :answer, :points
-  def initialize(question, answer, points)
+  attr_reader :question, :answer, :answer_time, :points, :options
+  def initialize(question, answer, answer_time, points, options)
     @question = question
     @answer = answer
-    @points = points.to_i
+    @answer_time = answer_time
+    @points = points
+    @options = options
   end
 
   def to_s
-    "#{question} (#{points} баллов)"
+    <<~QUESTION
+      #{question} (#{points} баллов, #{answer_time} секунд на ответ)
+
+      #{options.map.with_index(1) { |option, i| "#{i}. #{option}"}.join("\n") }
+    QUESTION
   end
 end

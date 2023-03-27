@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 require 'rexml/document'
+require 'timeout'
+require_relative "lib/question_parser"
 require_relative "lib/question"
 require_relative "lib/quiz"
 
@@ -10,35 +12,26 @@ unless File.exist?(file_name)
   abort "Извиняемся, хозяин, файл #{file_name} не найден."
 end
 
-file = File.new(file_name)
-doc = REXML::Document.new(file)
-file.close
-
-questions = []
-doc.elements.each('questions/question') do |item|
-  question = item.text.strip
-  answer = item.attributes['answer']
-  points = item.attributes['points']
-  questions << Question.new(question, answer, points)
-end
-
+questions = QuestionParser.run(file_name)
 quiz = Quiz.new(questions)
 
 until quiz.over?
-  if quiz.time_limit?
-    puts 'Не уложились! Идите учиться!!!'
-    exit
-  end
-  quiz.start_time!
-
   puts <<~CURRENT_QUIZ_STATUS
+
     Вопрос #{quiz.current_question_number + 1}:
-    «#{quiz.current_question}»
-    #{quiz.current_options!}
+    #{quiz.current_question}
   CURRENT_QUIZ_STATUS
 
-  until (user_answer = $stdin.gets.to_i).between?(1, quiz.options.size)
-    puts 'Выберите номер из предложенных вариантов'
+  user_answer = ''
+  begin
+    Timeout.timeout(quiz.current_question.answer_time) do
+      until (user_answer = $stdin.gets.to_i).between?(1, quiz.options.size)
+        puts 'Выберите номер из предложенных вариантов'
+      end
+    end
+  rescue Timeout::Error
+    puts 'Не уложились! Идите учиться!!!'
+    break
   end
 
   if quiz.answer_correct?(user_answer)
@@ -51,12 +44,9 @@ until quiz.over?
   quiz.next_question!
 end
 
-if quiz.time_limit?
-  puts 'Не уложились! Идите учиться!!!'
-else
-  puts <<~SUMMARIZE
-    Правильных ответов: #{quiz.total_correct_answers} из #{quiz.questions.size}
-    Вы набрали #{quiz.total_points} баллов
-  SUMMARIZE
-end
+puts <<~SUMMARIZE
+
+  Правильных ответов: #{quiz.total_correct_answers} из #{quiz.questions.size}
+  Вы набрали #{quiz.total_points} баллов
+SUMMARIZE
 
