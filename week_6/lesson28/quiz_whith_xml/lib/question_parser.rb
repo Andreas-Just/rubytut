@@ -12,7 +12,7 @@ class QuestionParser
       points = node.attributes['points'].to_i
       answer_time = node.attributes['seconds'].to_i
 
-      Question.new(question, answer, answer_time, points, options)
+      Question.new(question: question, answer: answer, answer_time: answer_time, points: points, options: options)
     end
   end
 end

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 class Question
   attr_reader :question, :answer, :answer_time, :points, :options
-  def initialize(question, answer, answer_time, points, options)
+  def initialize(question:, answer:, answer_time:, points:, options:)
     @question = question
     @answer = answer
     @answer_time = answer_time
