@@ -8,10 +8,6 @@ require_relative "lib/quiz"
 current_path = File.dirname(__FILE__)
 file_name = "#{current_path}/data/questions.xml"
 
-unless File.exist?(file_name)
-  abort "Извиняемся, хозяин, файл #{file_name} не найден."
-end
-
 questions = QuestionParser.run(file_name)
 quiz = Quiz.new(questions)
 

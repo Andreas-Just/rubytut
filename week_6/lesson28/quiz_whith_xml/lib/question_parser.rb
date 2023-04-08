@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+#  true
 
 class QuestionParser
   def self.run(xml_file_path)
@@ -12,7 +12,13 @@ class QuestionParser
       points = node.attributes['points'].to_i
       answer_time = node.attributes['seconds'].to_i
 
-      Question.new(question: question, answer: answer, answer_time: answer_time, points: points, options: options)
+      Question.new(
+        text: question,
+        answer: answer,
+        answer_time: answer_time,
+        points: points,
+        options: options.shuffle
+      )
     end
   end
 end
