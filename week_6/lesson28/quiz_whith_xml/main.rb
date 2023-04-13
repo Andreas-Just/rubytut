@@ -1,9 +1,10 @@
 # frozen_string_literal: true
+
 require 'rexml/document'
 require 'timeout'
-require_relative "lib/question_parser"
-require_relative "lib/question"
-require_relative "lib/quiz"
+require_relative 'lib/question_parser'
+require_relative 'lib/question'
+require_relative 'lib/quiz'
 
 current_path = File.dirname(__FILE__)
 file_name = "#{current_path}/data/questions.xml"
@@ -31,7 +32,7 @@ until quiz.over?
   end
 
   if quiz.answer_correct?(user_answer)
-    puts "Верный ответ!"
+    puts 'Верный ответ!'
     quiz.score_up!
   else
     puts "Неправильно. Правильный ответ: #{quiz.correct_answer}"
@@ -45,4 +46,3 @@ puts <<~SUMMARIZE
   Правильных ответов: #{quiz.total_correct_answers} из #{quiz.questions.size}
   Вы набрали #{quiz.total_points} баллов
 SUMMARIZE
-

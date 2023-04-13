@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require_relative 'lib/clothing_item'
 require_relative 'lib/clothing_collection'
 
@@ -18,9 +19,9 @@ recommended_clothes = clothing_collection.clothing_type.map do |clothing_type|
 end
 
 # Вывод рекомендаций
-puts "\nПредлагаем сегодня надеть:\n\n"
-recommended_clothes.each do |item|
-  puts "#{item.name} (#{item.clothing_type}) #{item.temp_range}"
-end
+puts <<~ADVICE
 
+  Предлагаем сегодня надеть:
 
+  #{recommended_clothes.map { |item| "#{item.name} (#{item.clothing_type}) #{item.temp_range}" }.join("\n")}
+ADVICE
