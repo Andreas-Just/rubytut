@@ -1,4 +1,4 @@
-#  true
+# frozen_string_literal: true
 
 class QuestionParser
   def self.run(xml_file_path)
