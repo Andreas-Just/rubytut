@@ -1,14 +1,16 @@
 # frozen_string_literal: true
 
+# Класс Question представляет собой структуру данных для хранения информации о вопросе,
+# включая текст вопроса, ответ, время на ответ, количество баллов и варианты ответов.
 class Question
   attr_reader :text, :answer, :answer_time, :points, :options
 
-  def initialize(text:, answer:, answer_time:, points:, options:)
-    @text = text
-    @answer = answer
-    @answer_time = answer_time
-    @points = points
-    @options = options
+  def initialize(args)
+    @text = args[:text]
+    @answer = args[:answer]
+    @answer_time = args[:answer_time]
+    @points = args[:points]
+    @options = args[:options]
   end
 
   def to_s
