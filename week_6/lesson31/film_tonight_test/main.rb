@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'lib/film'
 
 films =
@@ -21,5 +23,5 @@ end
 
 selected_director = directors[user_choice - 1]
 
-puts "И сегодня вечером рекомендую посмотреть:"
+puts 'И сегодня вечером рекомендую посмотреть:'
 puts films.select { |film| film.director == selected_director }.sample
