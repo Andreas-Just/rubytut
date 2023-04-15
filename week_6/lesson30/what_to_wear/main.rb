@@ -4,24 +4,49 @@ require_relative 'lib/clothing_item'
 require_relative 'lib/clothing_collection'
 
 current_path = File.dirname(__FILE__)
-clothing_collection = ClothingCollection.new("#{current_path}/data")
+files_path = "#{current_path}/data/*.txt"
+wardrobe = ClothingCollection.read_from_folder(files_path)
 
 # Запрос температуры у пользователя
-puts 'Сколько градусов за окном? (можно с минусом)'
-temperature = gets.to_i
+temperature = nil
+user_input = nil
 
-# Генерация списка подходящей одежды
-recommended_clothes = clothing_collection.clothing_type.map do |clothing_type|
-  suitable_items = clothing_collection.items_of_type(clothing_type).select do |item|
-    item.suitable_for_temperature?(temperature)
+puts 'Сколько градусов за окном в \u00B0C? (можно с минусом)'
+
+begin
+  while user_input.nil? || !user_input.is_a?(Integer)
+    user_input_str = $stdin.gets
+
+    # Выход из цикла, если ввод закрыт или достигнут конец файла
+    break if user_input_str.nil?
+
+    user_input_str.strip!
+
+    break if user_input_str.downcase == 'exit' # Выход из цикла при вводе "exit"
+
+    user_input = Integer(user_input_str, 10, exception: false)
+
+    if user_input.is_a?(Integer)
+      temperature = user_input
+    else
+      puts 'Пожалуйста, введите корректное значение температуры (целое число) или "exit" для выхода.'
+    end
   end
-  suitable_items.sample
+rescue Interrupt
+  puts "\nВвод температуры был прерван. Завершение программы."
+  exit(0)
 end
 
+# Если пользователь ввел "exit", завершаем программу
+exit(0) if temperature.nil?
+
+# Генерация списка подходящей одежды
+recommendations = wardrobe.recommend_clothes(temperature)
+
 # Вывод рекомендаций
-puts <<~ADVICE
-
-  Предлагаем сегодня надеть:
-
-  #{recommended_clothes.map { |item| "#{item.name} (#{item.clothing_type}) #{item.temp_range}" }.join("\n")}
-ADVICE
+if recommendations.all?(&:nil?)
+  puts 'К сожалению, у нас нет одежды для данной температуры.'
+else
+  puts "\nПредлагаем сегодня надеть:\n\n"
+  recommendations.each { |item| puts item }
+end

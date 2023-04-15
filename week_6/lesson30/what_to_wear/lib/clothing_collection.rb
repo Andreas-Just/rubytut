@@ -1,50 +1,53 @@
 # frozen_string_literal: true
 
-require 'yaml'
-
 # Класс ClothingCollection предназначен для хранения и обработки коллекции
 # объектов одежды. Он содержит методы для считывания одежды из файлов и
 # рекомендации подходящей одежды на основе текущей температуры.
 class ClothingCollection
-  attr_accessor :clothes
+  attr_reader :clothes
 
-  def initialize(data_folder_path)
-    @clothes = read_all_clothes(data_folder_path)
+  def initialize(clothing_collection)
+    @clothes = clothing_collection
   end
 
-  def clothing_type
-    clothes.map(&:clothing_type).uniq
+  def clothing_types
+    clothes.map(&:type).uniq
   end
 
-  def items_of_type(clothing_type)
-    clothes.select { |item| item.clothing_type == clothing_type }
+  def recommend_clothes(temperature)
+    clothing_types.map do |clothing_type|
+      suitable_items_for_type(clothing_type, temperature).sample
+    end
+  end
+
+  def self.read_from_folder(files_path)
+    clothing_collection = []
+    Dir[files_path].each do |file|
+      clothing_data = File.readlines(file).map(&:strip)
+      clothing_collection << ClothingItem.new(
+        name: clothing_data[0],
+        type: clothing_data[1],
+        temp_range: parse_range_from_string(clothing_data[2])
+      )
+    end
+    new(clothing_collection)
   end
 
   private
 
-  def parse_range_from_string(range_string)
-    range_bounds = range_string.gsub(/[()]/, '').split(',').map(&:to_i)
-    range_bounds[0]..range_bounds[1]
+  def items_of_type(clothing_type)
+    clothes.select { |item| item.type == clothing_type }
   end
 
-  def read_clothing_items_from_file(file_path)
-    clothing_items = []
-    File.open(file_path, 'r') do |file|
-      until file.eof?
-        name = file.readline.strip
-        clothing_type = file.readline.strip
-        temp_range = parse_range_from_string(file.readline.strip)
-        clothing_items << ClothingItem.new(name, clothing_type, temp_range)
-      end
+  def suitable_items_for_type(clothing_type, temperature)
+    items_of_type(clothing_type).select do |item|
+      item.suitable_for_temperature?(temperature)
     end
-    clothing_items
   end
 
-  def read_all_clothes(data_folder_path)
-    clothing_collection = []
-    Dir.glob("#{data_folder_path}/*.txt").each do |file_path|
-      clothing_collection += read_clothing_items_from_file(file_path)
-    end
-    clothing_collection
+  def self.parse_range_from_string(range_string)
+    range_array = range_string.gsub(/[()]/, '').split(',').map(&:to_i)
+    range_array[0]..range_array[1]
   end
+  private_class_method :parse_range_from_string
 end
