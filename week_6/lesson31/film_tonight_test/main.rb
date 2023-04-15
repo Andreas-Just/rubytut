@@ -1,12 +1,13 @@
 # frozen_string_literal: true
 
 require_relative 'lib/film'
+require_relative 'methods'
 
-films =
-  Dir[File.join(__dir__, 'data', '*.txt')].map do |file_name|
-    lines = File.readlines(file_name, chomp: true)
-    Film.new(lines[0], lines[1], lines[2].to_i)
-  end
+current_path = File.dirname(__FILE__)
+
+films = Dir[File.join(current_path, 'data', '*.txt')].map do |file_name|
+  film_from_file(file_name)
+end
 
 directors = films.map(&:director).uniq
 
