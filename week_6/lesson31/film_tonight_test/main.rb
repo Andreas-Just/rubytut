@@ -3,9 +3,7 @@
 require_relative 'lib/film'
 require_relative 'methods'
 
-current_path = File.dirname(__FILE__)
-
-films = Dir[File.join(current_path, 'data', '*.txt')].map do |file_name|
+films = Dir[File.join(__dir__, 'data', '*.txt')].map do |file_name|
   film_from_file(file_name)
 end
 
