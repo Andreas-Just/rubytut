@@ -14,27 +14,6 @@ class ClothingCollection
     clothes.map(&:type).uniq
   end
 
-  def recommend_clothes(temperature)
-    clothing_types.map do |clothing_type|
-      suitable_items_for_type(clothing_type, temperature).sample
-    end
-  end
-
-  def self.read_from_folder(files_path)
-    clothing_collection = []
-    Dir[files_path].each do |file|
-      clothing_data = File.readlines(file).map(&:strip)
-      clothing_collection << ClothingItem.new(
-        name: clothing_data[0],
-        type: clothing_data[1],
-        temp_range: parse_range_from_string(clothing_data[2])
-      )
-    end
-    new(clothing_collection)
-  end
-
-  private
-
   def items_of_type(clothing_type)
     clothes.select { |item| item.type == clothing_type }
   end
@@ -45,9 +24,29 @@ class ClothingCollection
     end
   end
 
-  def self.parse_range_from_string(range_string)
-    range_array = range_string.gsub(/[()]/, '').split(',').map(&:to_i)
-    range_array[0]..range_array[1]
+  def recommend_clothes(temperature)
+    clothing_types.map do |clothing_type|
+      suitable_items_for_type(clothing_type, temperature).sample
+    end
   end
-  private_class_method :parse_range_from_string
+
+  def self.read_from_folder(files_path)
+    clothing_collection = []
+    Dir[files_path].map do |path|
+      clothing_data = File.readlines(path).map(&:strip)
+      clothing_collection << ClothingItem.new(
+        name: clothing_data[0],
+        type: clothing_data[1],
+        temp_range: parse_range_from_string(clothing_data[2])
+      )
+    end
+    new(clothing_collection)
+  end
+
+  class << self
+    def parse_range_from_string(range_string)
+      range_array = range_string.gsub(/[()]/, '').split(',').map(&:to_i)
+      range_array[0]..range_array[1]
+    end
+  end
 end

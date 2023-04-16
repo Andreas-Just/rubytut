@@ -33,7 +33,7 @@ begin
     end
   end
 rescue Interrupt
-  puts "\nВвод температуры был прерван. Завершение программы."
+  puts 'Ввод температуры был прерван. Завершение программы.'
   exit(0)
 end
 
@@ -47,6 +47,10 @@ recommendations = wardrobe.recommend_clothes(temperature)
 if recommendations.all?(&:nil?)
   puts 'К сожалению, у нас нет одежды для данной температуры.'
 else
-  puts "\nПредлагаем сегодня надеть:\n\n"
-  recommendations.each { |item| puts item }
+  puts <<~ADVICE
+
+    Предлагаем сегодня надеть:
+
+    #{recommendations.join("\n")}
+  ADVICE
 end
