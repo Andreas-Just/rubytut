@@ -1,10 +1,9 @@
 # frozen_string_literal: true
 
 require_relative 'lib/film'
-require_relative 'methods'
 
 films = Dir[File.join(__dir__, 'data', '*.txt')].map do |file_name|
-  film_from_file(file_name)
+  Film.from_file(file_name)
 end
 
 directors = films.map(&:director).uniq
