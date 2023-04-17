@@ -2,7 +2,7 @@
 
 require_relative 'lib/film'
 
-films = Dir[File.join(__dir__, 'data', '*.txt')].map do |file_name|
+films = Dir[File.join(File.dirname(__FILE__), 'data', '*.txt')].map do |file_name|
   Film.from_file(file_name)
 end
 
