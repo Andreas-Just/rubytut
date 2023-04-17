@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 puts 'Первое число:'
-number1 = STDIN.gets.to_i
+number1 = $stdin.gets.to_i
 puts 'Второе число:'
-number2 = STDIN.gets.to_i
+number2 = $stdin.gets.to_i
 
 puts 'Выберите операцию (+ - * /)'
-operation = STDIN.gets.chomp
+operation = $stdin.gets.chomp
 
 puts 'Результат:'
 case operation
