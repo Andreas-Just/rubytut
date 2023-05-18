@@ -4,6 +4,6 @@ class ElementParser
   def self.run(json_file_path)
     file = File.read(json_file_path, encoding: 'UTF-8')
     elements_data = JSON.parse(file)
-    elements_data.map { |symbol, details| Element.new(symbol, details) }
+    elements_data.map { |symbol, details| Element.new(symbol: symbol, **details) }
   end
 end

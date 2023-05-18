@@ -1,17 +1,6 @@
 # frozen_string_literal: true
 
-class Element
-  attr_reader :symbol, :name, :discoverer, :year, :density, :number
-
-  def initialize(symbol, details)
-    @symbol = symbol
-    @name = details['name']
-    @discoverer = details['discoverer']
-    @year = details['year']
-    @density = details['density']
-    @number = details['number']
-  end
-
+class Element < OpenStruct
   def to_s
     year_str = year.is_a?(Integer) ? "#{year} г." : year
 
