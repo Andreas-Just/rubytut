@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<questions>
+    <question points="8" seconds="12">
+        <text>Какое растение существует на самом деле?</text>
+        <options>
+            <option>Лох чилийский</option>
+            <option correct="true">Лох индийский</option>
+            <option>Лох греческий</option>
+            <option>Лох русский</option>
+        </options>
+    </question>
+
+    <question points="9" seconds="12">
+        <text>Что за место, где человек делает селфи на кухне, которую не может себе позволить?</text>
+        <options>
+            <option>Рим</option>
+            <option>Париж</option>
+            <option>Лондон</option>
+            <option correct="true">Икея</option>
+        </options>
+    </question>
+
+    <question points="13" seconds="12">
+        <text>Что Шекспир назвал «вкуснейшим из блюд в земном пиру»?</text>
+        <options>
+            <option>Опьянение</option>
+            <option>Любовь</option>
+            <option>Уединение</option>
+            <option correct="true">Сон</option>
+        </options>
+    </question>
+
+    <question points="12" seconds="12">
+        <text>Какой город объявлен официальной родиной русского Деда Мороза?</text>
+        <options>
+            <option>Малая Вишера</option>
+            <option correct="true">Великий Устюг</option>
+            <option>Вышний Волочек</option>
+            <option>Нижний Новгород</option>
+        </options>
+    </question>
+
+    <question points="11" seconds="12">
+        <text>С какой фигуры начинаются соревнования по городошному спорту?</text>
+        <options>
+            <option>Часовые</option>
+            <option>Артиллерия</option>
+            <option correct="true">Пушка</option>
+            <option>Пулемётное гнездо</option>
+        </options>
+    </question>
+
+    <question points="7" seconds="12">
+        <text>Сколько раз в сутки подзаводят куранты Спасской башни Кремля?</text>
+        <options>
+            <option>Один</option>
+            <option correct="true">Два</option>
+            <option>Три</option>
+            <option>Четыре</option>
+        </options>
+    </question>
+
+    <question points="6" seconds="12">
+        <text>К кому первому обратились за помощью дед и бабка, не справившись с репкой?</text>
+        <options>
+            <option>К Жучке</option>
+            <option correct="true">К внучке</option>
+            <option>К дочке</option>
+            <option>К залу</option>
+        </options>
+    </question>
+
+    <question points="14" seconds="12">
+        <text>Что Иван Ефремов в романе «Лезвие бритвы» назвал наивысшей степенью целесообразности?</text>
+        <options>
+            <option correct="true">Красоту</option>
+            <option>Мудрость</option>
+            <option>Смерть</option>
+            <option>Свободу</option>
+        </options>
+    </question>
+
+    <question points="9" seconds="12">
+        <text>В какой из этих столиц бывших союзных республик раньше появилось метро?</text>
+        <options>
+            <option>Ереван</option>
+            <option correct="true">Тбилиси</option>
+            <option>Баку</option>
+            <option>Минск</option>
+        </options>
+    </question>
+
+    <question points="8" seconds="12">
+        <text>Сколько морей омывают Балканский полуостров?</text>
+        <options>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option correct="true">6</option>
+        </options>
+    </question>
+
+    <question points="7" seconds="8">
+        <text>Что проводит боксер, наносящий удар противнику снизу?</text>
+        <options>
+            <option>Свинг</option>
+            <option>Хук</option>
+            <option correct="true">Апперкот</option>
+            <option>Джэб</option>
+        </options>
+    </question>
+
+    <question points="10" seconds="9">
+        <text>Кого нет среди смешариков?</text>
+        <options>
+            <option>Барана</option>
+            <option>Свиньи</option>
+            <option correct="true">Коня</option>
+            <option>Лося</option>
+        </options>
+    </question>
+
+    <question points="9" seconds="10">
+        <text>Как называется ближайшая к Земле звезда?</text>
+        <options>
+            <option>Проксиома Центавра</option>
+            <option correct="true">Солнце</option>
+            <option>Полярная</option>
+            <option>Сириус</option>
+        </options>
+    </question>
+
+    <question points="14" seconds="12">
+        <text>Что помогает запомнить мнемоническое правило «Это я знаю и помню прекрасно»?</text>
+        <options>
+            <option correct="true">Число Пи</option>
+            <option>Ряд активности металлов</option>
+            <option>Цвета радуги</option>
+            <option>Порядок падежей</option>
+        </options>
+    </question>
+
+    <question points="10" seconds="12">
+        <text>Какую площадь имеет клетка стандартной школьной тетради?</text>
+        <options>
+            <option>1.25 кв.см</option>
+            <option>0.5 кв.см</option>
+            <option>1 кв.см</option>
+            <option correct="true">0.25 кв.см</option>
+        </options>
+    </question>
+
+    <question points="15" seconds="10">
+        <text>Что происходит на соревнованиях по стрельбе, если соперники набрали одинаковое количество очков?</text>
+        <options>
+            <option>Перевербовка</option>
+            <option>Перепалка</option>
+            <option correct="true">Перестрелка</option>
+            <option>Перебранка</option>
+        </options>
+    </question>
+
+    <question points="6" seconds="8">
+        <text>Что вращается вокруг Земли?</text>
+        <options>
+            <option correct="true">Луна</option>
+            <option>Солнце</option>
+            <option>Марс</option>
+            <option>Венера</option>
+        </options>
+    </question>
+
+    <question points="13" seconds="12">
+        <text>Как назывались старинные русские пушки-гаубицы?</text>
+        <options>
+            <option>Кентавр</option>
+            <option>Грифон</option>
+            <option>Василиск</option>
+            <option correct="true">Единорог</option>
+        </options>
+    </question>
+
+    <question points="9" seconds="9">
+        <text>Что растёт в огороде?</text>
+        <options>
+            <option correct="true">Лук</option>
+            <option>Пистолет</option>
+            <option>Пулемёт</option>
+            <option>Ракета СС-20</option>
+        </options>
+    </question>
+
+    <question points="14" seconds="12">
+        <text>О чём писал Грибоедов, отмечая, что он «нам сладок и приятен»?</text>
+        <options>
+            <option>Дух купечества</option>
+            <option>Дар пророчества</option>
+            <option correct="true">Дым Отечества</option>
+            <option>Пыл девичества</option>
+        </options>
+    </question>
+
+    <question points="11" seconds="12">
+        <text>Какого персонажа нет в известной считалке «На золотом крыльце сидели»?</text>
+        <options>
+            <option>Сапожника</option>
+            <option correct="true">Кузнеца</option>
+            <option>Короля</option>
+            <option>Портного</option>
+        </options>
+    </question>
+
+    <question points="8" seconds="12">
+        <text>Что такое десница?</text>
+        <options>
+            <option>Бровь</option>
+            <option>Глаз</option>
+            <option>Шея</option>
+            <option correct="true">Рука</option>
+        </options>
+    </question>
+
+    <question points="12" seconds="12">
+        <text>На что кладут руку члены английского общества лысых во время присяги?</text>
+        <options>
+            <option>Баскетбольный мяч</option>
+            <option correct="true">Бильярдный шар</option>
+            <option>Апельсин</option>
+            <option>Кокосовый орех</option>
+        </options>
+    </question>
+
+    <question points="10" seconds="12">
+        <text>Как Пётр Ильич Чайковский назвал свою серенаду для скрипки с оркестром си-бемоль минор?</text>
+        <options>
+            <option>Флегматическая</option>
+            <option correct="true">Меланхолическая</option>
+            <option>Холерическая</option>
+            <option>Сангвиническая</option>
+        </options>
+    </question>
+
+    <question points="13" seconds="12">
+        <text>Какое животное имеет второе название — кугуар?</text>
+        <options>
+            <option>Оцелот</option>
+            <option>Леопард</option>
+            <option correct="true">Пума</option>
+            <option>Пантера</option>
+        </options>
+    </question>
+
+    <question points="15" seconds="12">
+        <text>Какой химический элемент назван в честь злого подземного гнома?</text>
+        <options>
+            <option>Гафний</option>
+            <option correct="true">Кобальт</option>
+            <option>Бериллий</option>
+            <option>Теллур</option>
+        </options>
+    </question>
+</questions>
