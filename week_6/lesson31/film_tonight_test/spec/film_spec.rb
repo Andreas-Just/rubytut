@@ -1,10 +1,5 @@
 # frozen_string_literal: true
 
-def fixture_path(file)
-  File.join(File.dirname(__FILE__), 'fixtures', file)
-end
-
-# rubocop:disable Metrics/BlockLength
 RSpec.describe Film do
   describe '#initialize' do
     let(:film) { Film.new('The Godfather', 'Francis Ford Coppola', 1972) }
@@ -41,4 +36,3 @@ RSpec.describe Film do
     end
   end
 end
-# rubocop:enable Metrics/BlockLength

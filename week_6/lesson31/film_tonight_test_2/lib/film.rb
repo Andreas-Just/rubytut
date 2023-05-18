@@ -7,6 +7,15 @@
 class Film
   attr_reader :title, :director, :year
 
+  def self.from_file(file_path)
+    lines = File.readlines(file_path, chomp: true)
+    title = lines[0]
+    director = lines[1]
+    year = lines[2].to_i
+
+    new(title, director, year)
+  end
+
   def initialize(title, director, year)
     @title = title
     @director = director
@@ -15,14 +24,5 @@ class Film
 
   def to_s
     "#{director} — #{title} (#{year})"
-  end
-
-  def self.from_file(file_path)
-    lines = File.readlines(file_path, chomp: true)
-    title = lines[0]
-    director = lines[1]
-    year = lines[2].to_i
-
-    new(title, director, year)
   end
 end
