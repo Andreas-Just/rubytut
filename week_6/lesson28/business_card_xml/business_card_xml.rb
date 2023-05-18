@@ -14,15 +14,15 @@ end
 # /XXX
 
 
-require "rexml/document"
+require 'rexml/document'
 
 current_path = File.dirname(__FILE__)
-file_name = current_path + "/business_card.xml"
+file_name = "#{current_path}/data.xml"
 
-abort "Не удалось найти визитку" unless File.exist?(file_name)
+abort 'Не удалось найти визитку' unless File.exist?(file_name)
 
 # Открываем файл и создаём из его содержимого REXML-объект
-file = File.new(file_name, "r:UTF-8")
+file = File.new(file_name, 'r:UTF-8')
 doc = REXML::Document.new(file)
 file.close
 
@@ -33,11 +33,11 @@ file.close
 card = {}
 
 # Обратите внимание, что ключами в нашем массиве будут не метки (как обычно), а строки
-["first_name", "second_name", "last_name", "phone", "email", "skills"].each do |field|
+%w[first_name second_name last_name phone email skills].each do |field|
   card[field] = doc.root.elements[field].text
 end
 
 # Наконец, выведем визитку в консоль
-puts "#{card["first_name"]} #{card["second_name"][0]}. #{card["last_name"]}"
-puts "#{card["phone"]}, #{card["email"]}"
-puts "#{card["skills"]}"
+puts "#{card['first_name']} #{card['second_name'][0]}. #{card['last_name']}"
+puts "#{card['phone']}, #{card['email']}"
+puts "#{card['skills']}"
