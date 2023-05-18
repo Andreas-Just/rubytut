@@ -31,10 +31,9 @@ class ClothingCollection
   end
 
   def self.read_from_folder(files_path)
-    clothing_collection = []
-    Dir[files_path].map do |path|
+    clothing_collection = Dir[files_path].map do |path|
       clothing_data = File.readlines(path).map(&:strip)
-      clothing_collection << ClothingItem.new(
+      ClothingItem.new(
         name: clothing_data[0],
         type: clothing_data[1],
         temp_range: parse_range_from_string(clothing_data[2])
