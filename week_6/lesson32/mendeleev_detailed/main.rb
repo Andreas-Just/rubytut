@@ -14,9 +14,9 @@ puts <<~USER_PROMPT
 
 USER_PROMPT
 
-symbol = gets.chomp
+symbol = $stdin.gets.chomp.downcase
 
-element = elements.find { |el| el.symbol == symbol }
+element = elements.find { |el| el.symbol.downcase == symbol }
 
 if element
   puts element
