@@ -1,0 +1,828 @@
+{
+  "H": {
+    "name": "Водород",
+    "discoverer": "Кавендиш",
+    "year": 1766,
+    "density": 0.08988,
+    "number": 1
+  },
+  "He": {
+    "name": "Гелий",
+    "discoverer": "Локьер, Жансен, Рамзай",
+    "year": 1868,
+    "density": 0.1785,
+    "number": 2
+  },
+  "Li": {
+    "name": "Литий",
+    "discoverer": "Арфведсон",
+    "year": 1817,
+    "density": 0.534,
+    "number": 3
+  },
+  "Be": {
+    "name": "Бериллий",
+    "discoverer": "Воклен",
+    "year": 1798,
+    "density": 1.85,
+    "number": 4
+  },
+  "B": {
+    "name": "Бор",
+    "discoverer": "Дэви и Гей-Люссак",
+    "year": 1808,
+    "density": 2.34,
+    "number": 5
+  },
+  "C": {
+    "name": "Углерод",
+    "discoverer": "неизвестен",
+    "year": "доисторический период",
+    "density": 2.267,
+    "number": 6
+  },
+  "N": {
+    "name": "Азот",
+    "discoverer": "Резерфорд",
+    "year": 1772,
+    "density": 1.2506,
+    "number": 7
+  },
+  "O": {
+    "name": "Кислород",
+    "discoverer": "Пристли и Шееле",
+    "year": 1774,
+    "density": 1.429,
+    "number": 8
+  },
+  "F": {
+    "name": "Фтор",
+    "discoverer": "Муассан",
+    "year": 1886,
+    "density": 1.696,
+    "number": 9
+  },
+  "Ne": {
+    "name": "Неон",
+    "discoverer": "Рамзай и Траверс",
+    "year": 1898,
+    "density": 0.9002,
+    "number": 10
+  },
+  "Na": {
+    "name": "Натрий",
+    "discoverer": "Дэви",
+    "year": 1807,
+    "density": 0.971,
+    "number": 11
+  },
+  "Mg": {
+    "name": "Магний",
+    "discoverer": "Блэк",
+    "year": 1755,
+    "density": 1.738,
+    "number": 12
+  },
+  "Al": {
+    "name": "Алюминий",
+    "discoverer": "Вёлер",
+    "year": 1825,
+    "density": 2.698,
+    "number": 13
+  },
+  "Si": {
+    "name": "Кремний",
+    "discoverer": "Берцелиус",
+    "year": 1824,
+    "density": 2.3296,
+    "number": 14
+  },
+  "P": {
+    "name": "Фосфор",
+    "discoverer": "Бранд",
+    "year": 1669,
+    "density": 1.82,
+    "number": 15
+  },
+  "S": {
+    "name": "Сера",
+    "discoverer": "неизвестен",
+    "year": "доисторический период",
+    "density": 2.07,
+    "number": 16
+  },
+  "Cl": {
+    "name": "Хлор",
+    "discoverer": "Шееле",
+    "year": 1774,
+    "density": 3.214,
+    "number": 17
+  },
+  "Ar": {
+    "name": "Аргон",
+    "discoverer": "Рамзай и Рэлей",
+    "year": 1894,
+    "density": 1.784,
+    "number": 18
+  },
+  "K": {
+    "name": "Калий",
+    "discoverer": "Дэви",
+    "year": 1807,
+    "density": 0.89,
+    "number": 19
+  },
+  "Ca": {
+    "name": "Кальций",
+    "discoverer": "Дэви",
+    "year": 1808,
+    "density": 1.55,
+    "number": 20
+  },
+  "Sc": {
+    "name": "Скандий",
+    "discoverer": "Нильсон",
+    "year": 1879,
+    "density": 2.989,
+    "number": 21
+  },
+  "Ti": {
+    "name": "Титан",
+    "discoverer": "Грегор",
+    "year": 1791,
+    "density": 4.54,
+    "number": 22
+  },
+  "V": {
+    "name": "Ванадий",
+    "discoverer": "Сефстрём",
+    "year": 1830,
+    "density": 6.11,
+    "number": 23
+  },
+  "Cr": {
+    "name": "Хром",
+    "discoverer": "Воклен",
+    "year": 1797,
+    "density": 7.19,
+    "number": 24
+  },
+  "Mn": {
+    "name": "Марганец",
+    "discoverer": "Ган",
+    "year": 1774,
+    "density": 7.21,
+    "number": 25
+  },
+  "Fe": {
+    "name": "Железо",
+    "discoverer": "неизвестен",
+    "year": "доисторический период",
+    "density": 7.874,
+    "number": 26
+  },
+  "Co": {
+    "name": "Кобальт",
+    "discoverer": "Брандт",
+    "year": 1735,
+    "density": 8.9,
+    "number": 27
+  },
+  "Ni": {
+    "name": "Никель",
+    "discoverer": "Кронштедт",
+    "year": 1751,
+    "density": 8.912,
+    "number": 28
+  },
+  "Cu": {
+    "name": "Медь",
+    "discoverer": "неизвестен",
+    "year": "доисторический период",
+    "density": 8.96,
+    "number": 29
+  },
+  "Zn": {
+    "name": "Цинк",
+    "discoverer": "неизвестен",
+    "year": 1746,
+    "density": 7.134,
+    "number": 30
+  },
+  "Ga": {
+    "name": "Галлий",
+    "discoverer": "Буа-де-Мозель",
+    "year": 1875,
+    "density": 5.907,
+    "number": 31
+  },
+  "Ge": {
+    "name": "Германий",
+    "discoverer": "Винклер",
+    "year": 1886,
+    "density": 5.323,
+    "number": 32
+  },
+  "As": {
+    "name": "Мышьяк",
+    "discoverer": "Альберт Великий",
+    "year": 1250,
+    "density": 5.776,
+    "number": 33
+  },
+  "Se": {
+    "name": "Селен",
+    "discoverer": "Берцелиус",
+    "year": 1817,
+    "density": 4.809,
+    "number": 34
+  },
+  "Br": {
+    "name": "Бром",
+    "discoverer": "Балар и Гей-Люссак",
+    "year": 1826,
+    "density": 3.122,
+    "number": 35
+  },
+  "Kr": {
+    "name": "Криптон",
+    "discoverer": "Рамзай и Траверс",
+    "year": 1898,
+    "density": 0.003733,
+    "number": 36
+  },
+  "Rb": {
+    "name": "Рубидий",
+    "discoverer": "Бунзен и Кирхгофф",
+    "year": 1861,
+    "density": 1.532,
+    "number": 37
+  },
+  "Sr": {
+    "name": "Стронций",
+    "discoverer": "Дэви",
+    "year": 1808,
+    "density": 2.64,
+    "number": 38
+  },
+  "Y": {
+    "name": "Иттрий",
+    "discoverer": "Гадолин",
+    "year": 1794,
+    "density": 4.469,
+    "number": 39
+  },
+  "Zr": {
+    "name": "Цирконий",
+    "discoverer": "Клапрот",
+    "year": 1789,
+    "density": 6.506,
+    "number": 40
+  },
+  "Nb": {
+    "name": "Ниобий",
+    "discoverer": "Гацшмидт",
+    "year": 1801,
+    "density": 8.57,
+    "number": 41
+  },
+  "Mo": {
+    "name": "Молибден",
+    "discoverer": "Шелейн",
+    "year": 1778,
+    "density": 10.28,
+    "number": 42
+  },
+  "Tc": {
+    "name": "Технеций",
+    "discoverer": "Перри и Сегре",
+    "year": 1937,
+    "density": 11.5,
+    "number": 43
+  },
+  "Ru": {
+    "name": "Рутений",
+    "discoverer": "Клаус",
+    "year": 1844,
+    "density": 12.45,
+    "number": 44
+  },
+  "Rh": {
+    "name": "Родий",
+    "discoverer": "Воллестон",
+    "year": 1803,
+    "density": 12.41,
+    "number": 45
+  },
+  "Pd": {
+    "name": "Палладий",
+    "discoverer": "Воллестон",
+    "year": 1803,
+    "density": 12.02,
+    "number": 46
+  },
+  "Ag": {
+    "name": "Серебро",
+    "discoverer": "неизвестен",
+    "year": "доисторический период",
+    "density": 10.49,
+    "number": 47
+  },
+  "Cd": {
+    "name": "Кадмий",
+    "discoverer": "Штромейер",
+    "year": 1817,
+    "density": 8.69,
+    "number": 48
+  },
+  "In": {
+    "name": "Индий",
+    "discoverer": "Рихтер и Райх",
+    "year": 1863,
+    "density": 7.31,
+    "number": 49
+  },
+  "Sn": {
+    "name": "Олово",
+    "discoverer": "неизвестен",
+    "year": "доисторический период",
+    "density": 7.287,
+    "number": 50
+  },
+  "Sb": {
+    "name": "Сурьма",
+    "discoverer": "неизвестен",
+    "year": "доисторический период",
+    "density": 6.685,
+    "number": 51
+  },
+  "Te": {
+    "name": "Теллур",
+    "discoverer": "Реклингаузен",
+    "year": 1782,
+    "density": 6.232,
+    "number": 52
+  },
+  "I": {
+    "name": "Йод",
+    "discoverer": "Куртуа",
+    "year": 1811,
+    "density": 4.93,
+    "number": 53
+  },
+  "Xe": {
+    "name": "Ксенон",
+    "discoverer": "Рамзай и Траверс",
+    "year": 1898,
+    "density": 5.894,
+    "number": 54
+  },
+  "Cs": {
+    "name": "Цезий",
+    "discoverer": "Бунзен и Кирхгоф",
+    "year": 1860,
+    "density": 1.93,
+    "number": 55
+  },
+  "Ba": {
+    "name": "Барий",
+    "discoverer": "Дэви",
+    "year": 1808,
+    "density": 3.59,
+    "number": 56
+  },
+  "La": {
+    "name": "Лантан",
+    "discoverer": "Мосандер",
+    "year": 1839,
+    "density": 6.15,
+    "number": 57
+  },
+  "Ce": {
+    "name": "Церий",
+    "discoverer": "Берцелиус и Гиссингер",
+    "year": 1803,
+    "density": 6.77,
+    "number": 58
+  },
+  "Pr": {
+    "name": "Празеодим",
+    "discoverer": "Ф. В. Воке",
+    "year": 1885,
+    "density": 6.77,
+    "number": 59
+  },
+  "Nd": {
+    "name": "Неодим",
+    "discoverer": "Ф. В. Воке",
+    "year": 1885,
+    "density": 7.01,
+    "number": 60
+  },
+  "Pm": {
+    "name": "Прометий",
+    "discoverer": "Маринский, Гленн и Корсин",
+    "year": 1947,
+    "density": 7.26,
+    "number": 61
+  },
+  "Sm": {
+    "name": "Самарий",
+    "discoverer": "Буассиран",
+    "year": 1879,
+    "density": 7.52,
+    "number": 62
+  },
+  "Eu": {
+    "name": "Европий",
+    "discoverer": "Демарсе",
+    "year": 1901,
+    "density": 5.24,
+    "number": 63
+  },
+  "Gd": {
+    "name": "Гадолиний",
+    "discoverer": "Мариниак",
+    "year": 1880,
+    "density": 7.9,
+    "number": 64
+  },
+  "Tb": {
+    "name": "Тербий",
+    "discoverer": "Мосандер",
+    "year": 1843,
+    "density": 8.23,
+    "number": 65
+  },
+  "Dy": {
+    "name": "Диспрозий",
+    "discoverer": "Лекок де Боарбодран",
+    "year": 1886,
+    "density": 8.55,
+    "number": 66
+  },
+  "Ho": {
+    "name": "Гольмий",
+    "discoverer": "Свете",
+    "year": 1867,
+    "density": 8.8,
+    "number": 67
+  },
+  "Er": {
+    "name": "Эрбий",
+    "discoverer": "Мосандер",
+    "year": 1842,
+    "density": 9.07,
+    "number": 68
+  },
+  "Tm": {
+    "name": "Тулий",
+    "discoverer": "Клепе",
+    "year": 1879,
+    "density": 9.32,
+    "number": 69
+  },
+  "Yb": {
+    "name": "Иттербий",
+    "discoverer": "Мариниак",
+    "year": 1878,
+    "density": 6.9,
+    "number": 70
+  },
+  "Lu": {
+    "name": "Лютеций",
+    "discoverer": "Урбен, Онге и Велсбах",
+    "year": 1907,
+    "density": 9.84,
+    "number": 71
+  },
+  "Hf": {
+    "name": "Гафний",
+    "discoverer": "Костер и Хейвеси",
+    "year": 1922,
+    "density": 13.31,
+    "number": 72
+  },
+  "Ta": {
+    "name": "Тантал",
+    "discoverer": "Экеберг",
+    "year": 1802,
+    "density": 16.65,
+    "number": 73
+  },
+  "W": {
+    "name": "Вольфрам",
+    "discoverer": "Эльгаф и Фаулк",
+    "year": 1783,
+    "density": 19.25,
+    "number": 74
+  },
+  "Re": {
+    "name": "Рений",
+    "discoverer": "Нодацк, Такке и Берг",
+    "year": 1925,
+    "density": 21.02,
+    "number": 75
+  },
+  "Os": {
+    "name": "Осмий",
+    "discoverer": "Теннант",
+    "year": 1803,
+    "density": 22.59,
+    "number": 76
+  },
+  "Ir": {
+    "name": "Иридий",
+    "discoverer": "Теннант",
+    "year": 1803,
+    "density": 22.56,
+    "number": 77
+  },
+  "Pt": {
+    "name": "Платина",
+    "discoverer": "Ульлоа и Вуд",
+    "year": 1735,
+    "density": 21.45,
+    "number": 78
+  },
+  "Au": {
+    "name": "Золото",
+    "discoverer": "неизвестен",
+    "year": "до н.э.",
+    "density": 19.32,
+    "number": 79
+  },
+  "Hg": {
+    "name": "Ртуть",
+    "discoverer": "неизвестен",
+    "year": "до н.э.",
+    "density": 13.53,
+    "number": 80
+  },
+  "Tl": {
+    "name": "Таллий",
+    "discoverer": "Кроукс",
+    "year": 1861,
+    "density": 11.85,
+    "number": 81
+  },
+  "Pb": {
+    "name": "Свинец",
+    "discoverer": "неизвестен",
+    "year": "до н.э.",
+    "density": 11.34,
+    "number": 82
+  },
+  "Bi": {
+    "name": "Висмут",
+    "discoverer": "Жоффруа",
+    "year": 1753,
+    "density": 9.78,
+    "number": 83
+  },
+  "Po": {
+    "name": "Полоний",
+    "discoverer": "Кюри",
+    "year": 1898,
+    "density": 9.32,
+    "number": 84
+  },
+  "At": {
+    "name": "Астат",
+    "discoverer": "Корсон, Маккензи и Сигерсон",
+    "year": 1940,
+    "density": "",
+    "number": 85
+  },
+  "Rn": {
+    "name": "Радон",
+    "discoverer": "Дорн",
+    "year": 1900,
+    "density": 9.73,
+    "number": 86
+  },
+  "Fr": {
+    "name": "Франций",
+    "discoverer": "Пере и Савич",
+    "year": 1939,
+    "density": "",
+    "number": 87
+  },
+  "Ra": {
+    "name": "Радий",
+    "discoverer": "Кюри",
+    "year": 1898,
+    "density": 5.5,
+    "number": 88
+  },
+  "Ac": {
+    "name": "Актиний",
+    "discoverer": "Фридрих Оскар Гизель",
+    "year": 1902,
+    "density": 10.07,
+    "number": 89
+  },
+  "Th": {
+    "name": "Торий",
+    "discoverer": "Янс Якоб Берцелиус",
+    "year": 1829,
+    "density": 11.72,
+    "number": 90
+  },
+  "Pa": {
+    "name": "Протактиний",
+    "discoverer": "Файде и Гизель",
+    "year": 1913,
+    "density": 15.37,
+    "number": 91
+  },
+  "U": {
+    "name": "Уран",
+    "discoverer": "Мартин Хейнрих Клапрот",
+    "year": 1789,
+    "density": 18.95,
+    "number": 92
+  },
+  "Np": {
+    "name": "Нептуний",
+    "discoverer": "Эдвин Макмиллан и Филип Хейг",
+    "year": 1940,
+    "density": 20.45,
+    "number": 93
+  },
+  "Pu": {
+    "name": "Плутоний",
+    "discoverer": "Гленн Т. Сиборг, Эдвин Макмиллан, Кеннет Келли и Альберт Гиорсо",
+    "year": 1940,
+    "density": 19.84,
+    "number": 94
+  },
+  "Am": {
+    "name": "Америций",
+    "discoverer": "Гленн Т. Сиборг, Ральф Джеймс, Леонард Морган и Альберт Гиорсо",
+    "year": 1944,
+    "density": 13.69,
+    "number": 95
+  },
+  "Cm": {
+    "name": "Кюрий",
+    "discoverer": "Гленн Т. Сиборг, Ральф Джеймс и Альберт Гиорсо",
+    "year": 1944,
+    "density": 13.51,
+    "number": 96
+  },
+  "Bk": {
+    "name": "Берклий",
+    "discoverer": "Гленн Т. Сиборг, Стенли Томпсон и Альберт Гиорсо",
+    "year": 1949,
+    "density": 14.78,
+    "number": 97
+  },
+  "Cf": {
+    "name": "Калифорний",
+    "discoverer": "Гленн Т. Сиборг, Стенли Томпсон и Альберт Гиорсо",
+    "year": 1950,
+    "density": 15.1,
+    "number": 98
+  },
+  "Es": {
+    "name": "Эйнштейний",
+    "discoverer": "Гленн Т. Сиборг, Альберт Гиорсо и коллектив Лаборатории имени Лоуренса",
+    "year": 1952,
+    "density": 8.84,
+    "number": 99
+  },
+  "Fm": {
+    "name": "Фермий",
+    "discoverer": "Гленн Т. Сиборг, Альберт Гиорсо и коллектив Лаборатории имени Лоуренса",
+    "year": 1952,
+    "density": 9.7,
+    "number": 100
+  },
+  "Md": {
+    "name": "Менделевий",
+    "discoverer": "Гленн Т. Сиборг, Альберт Гиорсо и коллектив Лаборатории имени Лоуренса",
+    "year": 1955,
+    "density": 10.28,
+    "number": 101
+  },
+  "No": {
+    "name": "Нобелий",
+    "discoverer": "Гленн Т. Сиборг, Альберт Гиорсо и коллектив Лаборатории имени Лоуренса",
+    "year": 1958,
+    "density": 9.9,
+    "number": 102
+  },
+  "Lr": {
+    "name": "Лоуренсий",
+    "discoverer": "Гленн Т. Сиборг, Альберт Гиорсо и коллектив Лаборатории имени Лоуренса",
+    "year": 1961,
+    "density": 12.9,
+    "number": 103
+  },
+  "Rf": {
+    "name": "Резерфордий",
+    "discoverer": "Коллектив Лаборатории имени Лоуренса",
+    "year": 1969,
+    "density": 23.2,
+    "number": 104
+  },
+  "Db": {
+    "name": "Дубний",
+    "discoverer": "Коллектив Флеровской лаборатории",
+    "year": 1967,
+    "density": 29.3,
+    "number": 105
+  },
+  "Sg": {
+    "name": "Сиборгий",
+    "discoverer": "Коллектив Лаборатории имени Лоуренса",
+    "year": 1974,
+    "density": 35.0,
+    "number": 106
+  },
+  "Bh": {
+    "name": "Борий",
+    "discoverer": "Коллектив Лаборатории имени Лоуренса",
+    "year": 1981,
+    "density": 37.1,
+    "number": 107
+  },
+  "Hs": {
+    "name": "Хассий",
+    "discoverer": "Коллектив Лаборатории Центра исследований тяжёлых ионов",
+    "year": 1984,
+    "density": 40.7,
+    "number": 108
+  },
+  "Mt": {
+    "name": "Мейтнерий",
+    "discoverer": "Коллектив Лаборатории Центра исследований тяжёлых ионов",
+    "year": 1982,
+    "density": 37.4,
+    "number": 109
+  },
+  "Ds": {
+    "name": "Дармштадтий",
+    "discoverer": "Коллектив Лаборатории Центра исследований тяжёлых ионов",
+    "year": 1994,
+    "density": 34.8,
+    "number": 110
+  },
+  "Rg": {
+    "name": "Рентгений",
+    "discoverer": "Коллектив Лаборатории Центра исследований тяжёлых ионов",
+    "year": 1994,
+    "density": 28.7,
+    "number": 111
+  },
+  "Cn": {
+    "name": "Коперниций",
+    "discoverer": "Коллектив Лаборатории Центра исследований тяжёлых ионов",
+    "year": 1996,
+    "density": 23.7,
+    "number": 112
+  },
+  "Nh": {
+      "name": "Нихоний",
+      "discoverer": "Коллектив Лаборатории имени Рикен",
+      "year": 2004,
+      "density": 16.0,
+      "number": 113
+  },
+  "Fl": {
+    "name": "Флеровий",
+    "discoverer": "Коллектив Объединенного института ядерных исследований",
+    "year": 1998,
+    "density": 14,
+    "number": 114
+  },
+  "Mc": {
+    "name": "Московий",
+    "discoverer": "Коллектив Объединенного института ядерных исследований и Лаборатории имени Лоуренса",
+    "year": 2003,
+    "density": 13.5,
+    "number": 115
+  },
+  "Lv": {
+    "name": "Ливерморий",
+    "discoverer": "Коллектив Объединенного института ядерных исследований и Лаборатории имени Лоуренса",
+    "year": 2000,
+    "density": 12.9,
+    "number": 116
+  },
+  "Ts": {
+    "name": "Теннессин",
+    "discoverer": "Коллектив Объединенного института ядерных исследований и Оук Ридж Национальная лаборатория",
+    "year": 2010,
+    "density": 7.2,
+    "number": 117
+  },
+  "Og": {
+    "name": "Оганесон",
+    "discoverer": "Коллектив Объединенного института ядерных исследований и Лаборатории имени Лоуренса",
+    "year": 2002,
+    "density": 5.0,
+    "number": 118
+  }
+}
