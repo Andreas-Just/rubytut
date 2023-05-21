@@ -17,7 +17,7 @@ begin
   end
 
   exchange_rate = value.to_f
-rescue
+rescue StandardError
   puts 'Не удалось получить курс доллара. Пожалуйста, введите его вручную:'
   exchange_rate = gets.to_f
 end
