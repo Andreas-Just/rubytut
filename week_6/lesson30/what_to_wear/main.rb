@@ -11,7 +11,7 @@ wardrobe = ClothingCollection.read_from_folder(files_path)
 temperature = nil
 user_input = nil
 
-puts 'Сколько градусов за окном в \u00B0C? (можно с минусом)'
+puts "Сколько градусов за окном в \u00B0C? (можно с минусом)"
 
 begin
   while user_input.nil? || !user_input.is_a?(Integer)

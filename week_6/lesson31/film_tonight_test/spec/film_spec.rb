@@ -24,12 +24,14 @@ RSpec.describe Film do
     let(:inception) { Film.from_file(fixture_path('02.txt')) }
 
     it 'creates a film from the contents of the file 01.txt' do
+      expect(inception).to be_a(Film)
       expect(schindler_list.title).to eq('Список Шиндлера')
       expect(schindler_list.director).to eq('Стивен Спилберг')
       expect(schindler_list.year).to eq(1993)
     end
 
     it 'creates a film from the contents of the file 02.txt' do
+      expect(inception).to be_a(Film)
       expect(inception.title).to eq('Начало')
       expect(inception.director).to eq('Кристофер Нолан')
       expect(inception.year).to eq(2010)
