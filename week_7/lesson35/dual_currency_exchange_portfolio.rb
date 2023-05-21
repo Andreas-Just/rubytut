@@ -9,16 +9,13 @@ begin
   uri = URI.parse('https://www.cbr.ru/scripts/XML_daily.asp')
   response = Net::HTTP.get_response(uri)
   doc = REXML::Document.new(response.body)
-  value = nil
-
-  # R01235 — Доллар США
-  doc.each_element('//Valute[@ID="R01235"]') do |currency_tag|
-    value = currency_tag.get_text('Value').to_s.tr(',', '.').to_f
-  end
+  value = doc.root.elements['//Valute[@ID="R01235"]/Value'].text.tr(',', '.').to_f
 
   exchange_rate = value.to_f
-rescue StandardError
-  puts 'Не удалось получить курс доллара. Пожалуйста, введите его вручную:'
+rescue StandardError => e
+  puts "Произошла ошибка при получении данных: #{e.message}"
+  puts 'Пожалуйста, введите его вручную:'
+
   exchange_rate = gets.to_f
 end
 
