@@ -1,6 +1,11 @@
 # frozen_string_literal: true
 
+require_relative '../lib/clothing_collection'
+require_relative '../lib/clothing_item'
+require_relative 'support/fixture_helper'
+
 RSpec.configure do |config|
+  config.include FixtureHelper
 
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
