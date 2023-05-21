@@ -16,7 +16,7 @@ rescue StandardError => e
   puts "Произошла ошибка при получении данных: #{e.message}"
   puts 'Пожалуйста, введите его вручную:'
 
-  exchange_rate = gets.to_f
+  exchange_rate = $stdin.gets.to_f
 end
 
 puts "Курс доллара #{exchange_rate}"
